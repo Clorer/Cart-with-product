@@ -11,9 +11,9 @@ function App() {
         <ProductGrid />
         <DesktopCart />
       </div>
-        {ModalVisible && <div className="mt-6">
+        <div className={`mt-6 ${ModalVisible ? "opacity-100" : "opacity-0 pointer-events-none"} transition-opacity duration-200`}>
           <ConfirmOrder />
-        </div>}
+        </div>
     </div>
   );
 }

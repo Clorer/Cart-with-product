@@ -10,9 +10,13 @@ export default function ConfirmOrder() {
   const { changeVisibleModal } = useModalCartStore();
 
   const handleClick = () => {
-    removeAllFromCart();
     changeVisibleModal();
-  }
+    setTimeout =
+      (() => {
+        removeAllFromCart();
+      },
+      200);
+  };
   return (
     <>
       <div className="w-full h-full bg-black/60 fixed z-50 inset-0 flex items-center justify-center">
@@ -21,14 +25,14 @@ export default function ConfirmOrder() {
           <h1 className="text-3xl font-bold mt-[2rem]">Order Confirmed</h1>
           <h1 className="opacity-50">We hope you enjoy your food!</h1>
           <div className="my-[1rem] rounded-lg bg-[#f4f0e9] p-[1rem]">
-              {cart?.map((product) => (
-                <ProductInCart key={product.id} product={product} />
-              ))}
-              <TotalPrice />
+            {cart?.map((product) => (
+              <ProductInCart key={product.id} product={product} />
+            ))}
+            <TotalPrice />
           </div>
           <ButtonCart clickFunc={handleClick}>Start new order</ButtonCart>
         </div>
       </div>
     </>
-  )
+  );
 }
