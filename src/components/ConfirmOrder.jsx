@@ -11,11 +11,9 @@ export default function ConfirmOrder() {
 
   const handleClick = () => {
     changeVisibleModal();
-    setTimeout =
-      (() => {
-        removeAllFromCart();
-      },
-      200);
+    setTimeout(() => {
+      removeAllFromCart();
+    }, 200);
   };
   return (
     <>

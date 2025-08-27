@@ -5,7 +5,7 @@ import ChangeCountBtn from "./ChangeCountBtn";
 export default function ProductCard({ DATA }){
     const {findInCart} = useCartStore();
 return(
-    <div className="relative w-[20rem] lg:w-[15rem] h-[25rem] lg:h-[20rem] m-auto">
+    <div className="relative max-w-[20rem] lg:max-w-[15rem] h-[25rem] lg:max-h-[20rem] m-auto">
         <img src={DATA.image.desktop} alt={DATA.name} className="w-[20rem] h-[19rem] lg:w-[15rem] lg:h-[14rem] rounded-lg" />
         {findInCart(DATA) ? <ChangeCountBtn product={DATA} /> : <AddToCartBtn product={DATA}/>}
         <div className="mt-[2rem]">
