@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+body, html{
+    font-family: RedHeadText;
+    background-color: #f4f0e9;
+    color: #563f2a;
+}
+@font-face {
+        font-family: RedHeadText;
+        src: url("./assets/fonts/RedHatText-VariableFont_wght.ttf")
+        format("truetype");
+    }
